@@ -101,6 +101,7 @@
 > Great question. We can use a lock on a driver if they sent a notification from the Match Service. The lock will store the Driver ID. The Match Service will check if a Driver ID is locked in the Zookeeper lock. This ensures that the Match Service will not send a notification to a locked. When the Driver accepts or rejects the request, we unlock the Driver. Lets also add a TTL of 30 seconds in case the Driver client crashes or is unresponsive, the lock releases by itself.\
 > I also added indexing on driver ID in the Ride Table because we read it heavily for availability (from status)
 
+![Alt text](/Whiteboards/Uber_whiteboard.png)
 ​
 
 ​
